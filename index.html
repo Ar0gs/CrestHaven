@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrestHaven Homes Ltd — Premium Smart Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">CH</div>
+      <div class="loader-bar"><span></span></div>
+      <p>CrestHaven Homes Ltd</p>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-mark">CH</span>
+        <span class="logo-text">CrestHaven <em>Homes</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#properties" class="nav-link">Properties</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-ghost" onclick="openModal('loginModal')">Sign In</button>
+        <button class="btn-primary" onclick="openModal('listingModal')">List Property</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag animate-up">South-West Nigeria's Premier Real Estate</div>
+      <h1 class="hero-title animate-up">
+        <span>Where Architecture</span>
+        <em>Meets Intelligence</em>
+      </h1>
+      <p class="hero-desc animate-up">Master-planned communities and smart home innovations across Ile-Ife, Ibadan, Akure & Abeokuta. Where luxury living meets cutting-edge automation.</p>
+      <div class="hero-cta animate-up">
+        <button class="btn-primary btn-lg" onclick="scrollTo('#properties')">Explore Properties</button>
+        <button class="btn-outline btn-lg" onclick="scrollTo('#projects')">View Projects</button>
+      </div>
+      <div class="hero-stats animate-up">
+        <div class="stat"><strong>100+</strong><span>Smart Homes by 2028</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>4</strong><span>Strategic Cities</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>38%</strong><span>Target Gross Margin</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span>🏡 CrestHaven Ife Estate — Launching Q3 2026</span>
+      <span>🔑 Bodija Revamp — Smart Conversions Now Available</span>
+      <span>🌿 Olumo Horizon — Eco Smart Bungalows from ₦45M</span>
+      <span>🏙️ Akure Crest Citadel — Mixed-Use Complex Coming Soon</span>
+      <span>📞 Speak with an Agent — Live Chat Available 24/7</span>
+      <span>🏡 CrestHaven Ife Estate — Launching Q3 2026</span>
+      <span>🔑 Bodija Revamp — Smart Conversions Now Available</span>
+      <span>🌿 Olumo Horizon — Eco Smart Bungalows from ₦45M</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-stack">
+            <div class="about-img about-img-1">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Modern Smart Home" loading="lazy"/>
+            </div>
+            <div class="about-img about-img-2">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80" alt="Luxury Interior" loading="lazy"/>
+            </div>
+            <div class="about-badge">
+              <strong>Est. 2026</strong>
+              <span>Trusted Developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-label">About CrestHaven</div>
+          <h2 class="section-title">Engineering the Future of South-West Living</h2>
+          <p>CrestHaven Homes Ltd is a premier, multi-disciplinary Nigerian real estate corporation delivering institutional-grade assets that merge architectural prestige with cutting-edge spatial automation.</p>
+          <p>Operating on a dual-engine model — building master-planned communities from the ground up, while converting legacy premium structures into intelligent smart homes — we serve professionals, academics, diaspora investors and high-net-worth individuals across the South-West corridor.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">⚡</div>
+              <div>
+                <strong>Smart Automation</strong>
+                <span>AI-driven climate, biometric security, full IoT retrofitting</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🌱</div>
+              <div>
+                <strong>Eco-Engineering</strong>
+                <span>Solar mini-grids, permeable drainage, sustainable civils</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🏛️</div>
+              <div>
+                <strong>COREN Certified</strong>
+                <span>All projects engineered to Nigeria's highest standards</span>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary">Speak with Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Strategic Pipeline 2026–2029</div>
+        <h2 class="section-title">Flagship Project Portfolio</h2>
+        <p class="section-sub">Four landmark developments transforming the South-West real estate landscape</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-city="Ile-Ife, Osun State">
+          <div class="project-num">01</div>
+          <div class="project-icon">🏙️</div>
+          <h3>CrestHaven Ife Estate</h3>
+          <p>Premium tech-driven gated community near major residential and academic axes. Features integrated solar power, smart security arrays, and IoT infrastructure throughout.</p>
+          <div class="project-tags">
+            <span>Gated Community</span>
+            <span>Solar Grid</span>
+            <span>Smart Security</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-city">📍 Ile-Ife, Osun</span>
+            <span class="project-status status-active">Launching Q3 2026</span>
+          </div>
+        </div>
+        <div class="project-card featured" data-city="Ibadan, Oyo State">
+          <div class="project-num">02</div>
+          <div class="project-icon">🏠</div>
+          <div class="project-featured-badge">Featured</div>
+          <h3>Bodija Revamp Project</h3>
+          <p>Acquiring legacy residential estates in Bodija and Jericho GRA, transforming them into modern voice-activated smart apartments with premium architectural finishes.</p>
+          <div class="project-tags">
+            <span>Smart Conversion</span>
+            <span>Voice Automation</span>
+            <span>Legacy Revamp</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-city">📍 Ibadan, Oyo</span>
+            <span class="project-status status-active">Now Available</span>
+          </div>
+        </div>
+        <div class="project-card" data-city="Akure, Ondo State">
+          <div class="project-num">03</div>
+          <div class="project-icon">🏢</div>
+          <h3>Akure Crest Citadel</h3>
+          <p>Mixed-use automated terraces and executive apartments targeting civil service leaders and agricultural corporate entities in Ondo's capital.</p>
+          <div class="project-tags">
+            <span>Mixed-Use</span>
+            <span>Executive Apts</span>
+            <span>Energy-Efficient</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-city">📍 Akure, Ondo</span>
+            <span class="project-status status-soon">Coming 2027</span>
+          </div>
+        </div>
+        <div class="project-card" data-city="Abeokuta, Ogun State">
+          <div class="project-num">04</div>
+          <div class="project-icon">🌿</div>
+          <h3>Olumo Horizon Estate</h3>
+          <p>Eco-efficient gated residential community with 2, 3, and 4-bedroom smart bungalows and terrace units for industrial professionals and capital commuters.</p>
+          <div class="project-tags">
+            <span>Eco-Efficient</span>
+            <span>Bungalows</span>
+            <span>Smart Terraces</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-city">📍 Abeokuta, Ogun</span>
+            <span class="project-status status-soon">Pre-Launch 2027</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTIES LISTINGS -->
+  <section id="properties" class="properties section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Available Units</div>
+        <h2 class="section-title">Properties For Sale & Rent</h2>
+      </div>
+      <!-- Filters -->
+      <div class="prop-filters">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="sale">For Sale</button>
+          <button class="filter-tab" data-filter="rent">For Rent</button>
+          <button class="filter-tab" data-filter="smart">Smart Homes</button>
+        </div>
+        <div class="filter-search">
+          <input type="text" id="propSearch" placeholder="Search by location, type..." />
+          <button onclick="filterProperties()">Search</button>
+        </div>
+      </div>
+      <!-- Property Grid -->
+      <div class="prop-grid" id="propGrid">
+        <!-- Populated by JS -->
+      </div>
+      <div class="prop-load-more">
+        <button class="btn-outline" id="loadMoreBtn" onclick="loadMoreProperties()">Load More Properties</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What We Offer</div>
+        <h2 class="section-title">Our Core Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Greenfield Development</h3>
+          <p>End-to-end master-planned community development: land acquisition, title processing, infrastructure engineering, and smart estate delivery.</p>
+          <ul>
+            <li>Sub-surface drainage systems</li>
+            <li>Solar mini-grid installation</li>
+            <li>Water purification infrastructure</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3>Legacy Property Conversion</h3>
+          <p>Acquisition, structural revamping, and smart retrofitting of premium legacy residential and commercial properties across the South-West.</p>
+          <ul>
+            <li>Non-destructive structural audits</li>
+            <li>Spatial layout remodeling</li>
+            <li>Premium finishing & reintroduction</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🤖</div>
+          <h3>Smart Home Automation</h3>
+          <p>Complete IoT retrofitting transforming standard properties into fully automated environments for modern Nigerian living.</p>
+          <ul>
+            <li>AI-driven climate & lighting control</li>
+            <li>Biometric & facial recognition security</li>
+            <li>Backup power management systems</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Land Banking & Investment</h3>
+          <p>Strategic acquisition of raw acreage along high-growth provincial corridors with secure title processing and premium plot divestment.</p>
+          <ul>
+            <li>Title tracing & legal clearing</li>
+            <li>Infrastructure layout development</li>
+            <li>Institutional & retail off-take</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">Development Lifecycle</h2>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Acquisition & Due Diligence</h4>
+            <p>Title validation, legal clearing, soil mechanics analysis & structural audits</p>
+            <span class="step-time">Months 1–2</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Approvals & Smart Design</h4>
+            <p>State planning approvals, complete IoT schematic layouts & architectural designs</p>
+            <span class="step-time">Months 3–4</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Civil Works & Retrofit</h4>
+            <p>Main access drainage, site security & initial demolition for conversion properties</p>
+            <span class="step-time">Months 5–7</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Construction & Rough-Ins</h4>
+            <p>Carcass framing, masonry, and rough-in cabling for smart automation paths</p>
+            <span class="step-time">Months 8–18</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h4>Automation & Handover</h4>
+            <p>Smart hub installation, interior finishing, title transfer & key handover</p>
+            <span class="step-time">Months 19–24</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Client Voices</div>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">Let's Build Your Future Home</h2>
+          <p>Our team of experts is ready to guide you through your investment journey across the South-West corridor.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="ci-icon">📍</span>
+              <div>
+                <strong>Primary Operations</strong>
+                <span>Ile-Ife, Ibadan, Akure & Abeokuta, South-West Nigeria</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="ci-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <span>+234 800 CRESTHAVEN</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="ci-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <span>info@cresthavenhomes.ng</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="ci-icon">🕐</span>
+              <div>
+                <strong>Business Hours</strong>
+                <span>Mon–Fri: 8AM–6PM | Sat: 9AM–3PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form id="contactForm" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" id="cfFirstName" placeholder="Adebayo" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" id="cfLastName" placeholder="Okafor" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="cfEmail" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="cfPhone" placeholder="+234 800 000 0000" />
+            </div>
+            <div class="form-group">
+              <label>Interest</label>
+              <select id="cfInterest">
+                <option value="">Select your interest...</option>
+                <option value="buy">Buy a Property</option>
+                <option value="rent">Rent a Property</option>
+                <option value="invest">Investment / Land Banking</option>
+                <option value="smart">Smart Home Conversion</option>
+                <option value="list">List My Property</option>
+                <option value="other">Other Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="cfMessage" rows="4" placeholder="Tell us more about what you're looking for..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="contactSubmitBtn">Send Enquiry</button>
+            <div id="contactMsg" class="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="logo-mark">CH</span>
+            <span class="logo-text">CrestHaven <em>Homes</em></span>
+          </div>
+          <p>Premium smart real estate development across the South-West economic corridor of Nigeria. Building communities. Automating futures.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">◈</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#projects">Our Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Properties</h4>
+          <ul>
+            <li><a href="#properties">For Sale</a></li>
+            <li><a href="#properties">For Rent</a></li>
+            <li><a href="#properties">Smart Homes</a></li>
+            <li><a href="#properties">Land Plots</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Cities</h4>
+          <ul>
+            <li><a href="#">Ile-Ife, Osun</a></li>
+            <li><a href="#">Ibadan, Oyo</a></li>
+            <li><a href="#">Akure, Ondo</a></li>
+            <li><a href="#">Abeokuta, Ogun</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 CrestHaven Homes Ltd. All rights reserved. RC: 0000000 | COREN Certified Partners</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIVE CHAT WIDGET -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header" id="chatHeader">
+      <div class="chat-agent-info">
+        <div class="chat-avatar">
+          <div class="avatar-dot online"></div>
+          <span>CH</span>
+        </div>
+        <div class="chat-agent-meta">
+          <strong>CrestHaven Support</strong>
+          <span class="online-status">🟢 Agents Online</span>
+        </div>
+      </div>
+      <div class="chat-controls">
+        <button onclick="minimizeChat()" title="Minimize">−</button>
+        <button onclick="closeChat()" title="Close">✕</button>
+      </div>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-welcome">
+        <div class="welcome-icon">🏡</div>
+        <p>Welcome to CrestHaven Homes! How can we assist you today?</p>
+        <div class="quick-replies">
+          <button onclick="sendQuickReply('I\'m interested in buying a property')">🏠 Buy Property</button>
+          <button onclick="sendQuickReply('I\'d like to rent a smart home')">🔑 Rent a Home</button>
+          <button onclick="sendQuickReply('Tell me about your smart home conversions')">🤖 Smart Homes</button>
+          <button onclick="sendQuickReply('I want to invest in land banking')">📊 Investment</button>
+        </div>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-typing" id="chatTyping" style="display:none">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Type your message..." onkeydown="handleChatKey(event)" />
+      <button onclick="sendChatMessage()" class="chat-send">➤</button>
+    </div>
+    <div class="chat-footer-note">Powered by CrestHaven AI · Live Agent Backup</div>
+  </div>
+
+  <!-- CHAT TRIGGER BUTTON -->
+  <button class="chat-trigger" id="chatTrigger" onclick="toggleChat()">
+    <span class="chat-trigger-icon">💬</span>
+    <span class="chat-badge" id="chatBadge">1</span>
+  </button>
+
+  <!-- MODALS -->
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
+      <div class="modal-header">
+        <div class="logo-mark small">CH</div>
+        <h3>Sign In to CrestHaven</h3>
+        <p>Access your property dashboard</p>
+      </div>
+      <div class="modal-tabs">
+        <button class="modal-tab active" onclick="switchTab('login', this)">Sign In</button>
+        <button class="modal-tab" onclick="switchTab('register', this)">Register</button>
+      </div>
+      <!-- Login Form -->
+      <div id="loginForm" class="modal-form">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="loginPassword" placeholder="••••••••" />
+        </div>
+        <button class="btn-primary btn-full" onclick="loginUser()">Sign In</button>
+        <p class="modal-alt-link"><a href="#" onclick="showPasswordReset()">Forgot your password?</a></p>
+        <div id="loginMsg" class="form-message"></div>
+      </div>
+      <!-- Register Form -->
+      <div id="registerForm" class="modal-form" style="display:none">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="regFirstName" placeholder="Adebayo" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="regLastName" placeholder="Okafor" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="regEmail" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="regPhone" placeholder="+234 800 000 0000" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="regPassword" placeholder="••••••••" />
+        </div>
+        <button class="btn-primary btn-full" onclick="registerUser()">Create Account</button>
+        <div id="registerMsg" class="form-message"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Listing Modal -->
+  <div class="modal-overlay" id="listingModal">
+    <div class="modal modal-wide">
+      <button class="modal-close" onclick="closeModal('listingModal')">✕</button>
+      <div class="modal-header">
+        <div class="logo-mark small">CH</div>
+        <h3>List Your Property</h3>
+        <p>Submit your property to the CrestHaven marketplace</p>
+      </div>
+      <div class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Property Title</label>
+            <input type="text" id="lTitle" placeholder="e.g. 3-Bedroom Smart Bungalow" />
+          </div>
+          <div class="form-group">
+            <label>Type</label>
+            <select id="lType">
+              <option value="apartment">Apartment</option>
+              <option value="bungalow">Bungalow</option>
+              <option value="terrace">Terrace House</option>
+              <option value="duplex">Duplex</option>
+              <option value="land">Land</option>
+              <option value="commercial">Commercial</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>City</label>
+            <select id="lCity">
+              <option value="Ile-Ife">Ile-Ife, Osun</option>
+              <option value="Ibadan">Ibadan, Oyo</option>
+              <option value="Akure">Akure, Ondo</option>
+              <option value="Abeokuta">Abeokuta, Ogun</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Listing Type</label>
+            <select id="lListing">
+              <option value="sale">For Sale</option>
+              <option value="rent">For Rent</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price (₦)</label>
+            <input type="number" id="lPrice" placeholder="45000000" />
+          </div>
+          <div class="form-group">
+            <label>Bedrooms</label>
+            <select id="lBedrooms">
+              <option value="1">1 Bedroom</option>
+              <option value="2">2 Bedrooms</option>
+              <option value="3">3 Bedrooms</option>
+              <option value="4">4 Bedrooms</option>
+              <option value="5">5+ Bedrooms</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Full Address</label>
+          <input type="text" id="lAddress" placeholder="Street, Area, City" />
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="lDesc" rows="3" placeholder="Describe the property features, amenities, condition..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Smart Home Features</label>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox" value="Smart Security" /> Smart Security</label>
+            <label class="checkbox-item"><input type="checkbox" value="Solar Power" /> Solar Power</label>
+            <label class="checkbox-item"><input type="checkbox" value="Voice Control" /> Voice Control</label>
+            <label class="checkbox-item"><input type="checkbox" value="AI Climate" /> AI Climate Control</label>
+            <label class="checkbox-item"><input type="checkbox" value="Backup Power" /> Backup Power</label>
+            <label class="checkbox-item"><input type="checkbox" value="Fiber Internet" /> Fiber Internet</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Contact Phone</label>
+          <input type="tel" id="lContactPhone" placeholder="+234 800 000 0000" />
+        </div>
+        <button class="btn-primary btn-full" onclick="submitListing()">Submit Property Listing</button>
+        <div id="listingMsg" class="form-message"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Detail Modal -->
+  <div class="modal-overlay" id="propertyModal">
+    <div class="modal modal-wide">
+      <button class="modal-close" onclick="closeModal('propertyModal')">✕</button>
+      <div id="propertyModalContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
