@@ -17,7 +17,7 @@
 const SUPABASE_URL = 'https://igzvhsngkvkfngcxfbmi.supabase.co';        // e.g. https://xxxx.supabase.co
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlnenZoc25na3ZrZm5nY3hmYm1pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkyMTkwMTYsImV4cCI6MjA5NDc5NTAxNn0.wRqBjiDaRqGx2agRYpwN93lNMfd-3ysmOp8P_H7OtYs';      // From Settings > API
 
-let supabase = null;
+//let supabase = null;
 let currentUser = null;
 let propOffset = 0;
 const PROP_LIMIT = 6;
